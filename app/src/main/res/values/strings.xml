@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TaipeiTour</string>
+    <string name="title">TaipeiTour</string>
+    <string name="detail_title">ItemTitle</string>
+    <string name="translate">翻譯</string>
+    <string name="item_title">標題</string>
+    <string name="item_desc">內容</string>
+    <string name="url">URL</string>
+</resources>
