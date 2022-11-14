@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-mergeDebugResources-34:/layout/app_bar_layout.xml",
+        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-37:/layout/app_bar_layout.xml"
+    },
+    {
+        "merged": "com.example.taipeitour.app-mergeDebugResources-34:/layout/activity_main.xml",
+        "source": "com.example.taipeitour.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-mergeDebugResources-34:/layout/activity_main.xml",
+        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-37:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-mergeDebugResources-34:/layout/taipei_tour_list_fragment.xml",
+        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-37:/layout/taipei_tour_list_fragment.xml"
+    }
+]

@@ -1,0 +1,31 @@
+R_DEF: Internal format may change without notice
+local
+color Primary
+color black
+color purple_200
+color purple_700
+color teal_200
+color teal_700
+color white
+color white_sand
+drawable bg_shadow_glay
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable leading_icon
+drawable translate_icon
+id edit
+id fragment_container
+id tool_bar
+id view_divider
+layout activity_main
+layout app_bar_layout
+layout taipei_tour_list_fragment
+menu app_tool_bar
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string title
+string translate
+style Theme.TaipeiTour
+xml backup_rules
+xml data_extraction_rules
