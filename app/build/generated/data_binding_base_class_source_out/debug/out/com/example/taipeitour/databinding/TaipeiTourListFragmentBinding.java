@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.example.taipeitour.R;
@@ -19,14 +20,19 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
+  public final RecyclerView rvTaipeiTour;
+
+  @NonNull
   public final AppBarLayoutBinding toolBar;
 
   @NonNull
   public final View viewDivider;
 
   private TaipeiTourListFragmentBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull AppBarLayoutBinding toolBar, @NonNull View viewDivider) {
+      @NonNull RecyclerView rvTaipeiTour, @NonNull AppBarLayoutBinding toolBar,
+      @NonNull View viewDivider) {
     this.rootView = rootView;
+    this.rvTaipeiTour = rvTaipeiTour;
     this.toolBar = toolBar;
     this.viewDivider = viewDivider;
   }
@@ -58,6 +64,12 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.rv_taipei_tour;
+      RecyclerView rvTaipeiTour = ViewBindings.findChildViewById(rootView, id);
+      if (rvTaipeiTour == null) {
+        break missingId;
+      }
+
       id = R.id.tool_bar;
       View toolBar = ViewBindings.findChildViewById(rootView, id);
       if (toolBar == null) {
@@ -71,8 +83,8 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TaipeiTourListFragmentBinding((CoordinatorLayout) rootView, binding_toolBar,
-          viewDivider);
+      return new TaipeiTourListFragmentBinding((CoordinatorLayout) rootView, rvTaipeiTour,
+          binding_toolBar, viewDivider);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

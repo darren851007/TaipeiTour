@@ -2625,6 +2625,7 @@ int drawable mtrl_switch_thumb_unchecked_pressed 0x7f0700c1
 int drawable mtrl_switch_track 0x7f0700c2
 int drawable mtrl_switch_track_decoration 0x7f0700c3
 int drawable mtrl_tabs_default_indicator 0x7f0700c4
+int drawable navigate_next 0x7f0700d6
 int drawable navigation_empty_icon 0x7f0700c5
 int drawable notification_action_background 0x7f0700c6
 int drawable notification_bg 0x7f0700c7
@@ -2862,6 +2863,7 @@ int id ifRoom 0x7f0800d7
 int id ignore 0x7f0800d8
 int id ignoreRequest 0x7f0800d9
 int id image 0x7f0800da
+int id imageView 0x7f0801e0
 int id immediateStop 0x7f0800db
 int id included 0x7f0800dc
 int id indeterminate 0x7f0800dd
@@ -2870,6 +2872,8 @@ int id invisible 0x7f0800df
 int id inward 0x7f0800e0
 int id italic 0x7f0800e1
 int id item_touch_helper_previous_elevation 0x7f0800e2
+int id iv_detail 0x7f0801e1
+int id iv_picture 0x7f0801e2
 int id jumpToEnd 0x7f0800e3
 int id jumpToStart 0x7f0800e4
 int id labeled 0x7f0800e5
@@ -2990,6 +2994,7 @@ int id right_icon 0x7f080157
 int id right_side 0x7f080158
 int id rounded 0x7f080159
 int id row_index_key 0x7f08015a
+int id rv_taipei_tour 0x7f0801e9
 int id save_non_transition_alpha 0x7f08015b
 int id save_overlay_view 0x7f08015c
 int id sawtooth 0x7f08015d
@@ -3098,6 +3103,12 @@ int id transition_position 0x7f0801c3
 int id transition_scene_layoutid_cache 0x7f0801c4
 int id transition_transform 0x7f0801c5
 int id triangle 0x7f0801c6
+int id tv_content 0x7f0801e3
+int id tv_detail_desc 0x7f0801e4
+int id tv_detail_title 0x7f0801e5
+int id tv_title 0x7f0801e6
+int id tv_url 0x7f0801e7
+int id tv_web_url 0x7f0801e8
 int id unchecked 0x7f0801c7
 int id uniform 0x7f0801c8
 int id unlabeled 0x7f0801c9
@@ -3245,6 +3256,7 @@ int layout abc_search_view 0x7f0b0019
 int layout abc_select_dialog_material 0x7f0b001a
 int layout abc_tooltip 0x7f0b001b
 int layout activity_main 0x7f0b001c
+int layout app_bar_detail_toolbar 0x7f0b0069
 int layout app_bar_layout 0x7f0b001d
 int layout custom_dialog 0x7f0b001e
 int layout design_bottom_navigation_item 0x7f0b001f
@@ -3262,6 +3274,7 @@ int layout design_navigation_menu 0x7f0b002a
 int layout design_navigation_menu_item 0x7f0b002b
 int layout design_text_input_end_icon 0x7f0b002c
 int layout design_text_input_start_icon 0x7f0b002d
+int layout list_item 0x7f0b006a
 int layout m3_alert_dialog 0x7f0b002e
 int layout m3_alert_dialog_actions 0x7f0b002f
 int layout m3_alert_dialog_title 0x7f0b0030
@@ -3320,6 +3333,7 @@ int layout select_dialog_item_material 0x7f0b0064
 int layout select_dialog_multichoice_material 0x7f0b0065
 int layout select_dialog_singlechoice_material 0x7f0b0066
 int layout support_simple_spinner_dropdown_item 0x7f0b0067
+int layout taipei_tour_list_detail_fragment 0x7f0b006b
 int layout taipei_tour_list_fragment 0x7f0b0068
 int menu app_tool_bar 0x7f0d0000
 int mipmap ic_launcher 0x7f0e0000
@@ -3365,6 +3379,7 @@ int string character_counter_content_description 0x7f100024
 int string character_counter_overflowed_content_description 0x7f100025
 int string character_counter_pattern 0x7f100026
 int string clear_text_end_icon_content_description 0x7f100027
+int string detail_title 0x7f100090
 int string error_a11y_label 0x7f100028
 int string error_icon_content_description 0x7f100029
 int string exposed_dropdown_menu_content_description 0x7f10002a
@@ -3372,6 +3387,8 @@ int string fab_transformation_scrim_behavior 0x7f10002b
 int string fab_transformation_sheet_behavior 0x7f10002c
 int string hide_bottom_view_on_scroll_behavior 0x7f10002d
 int string icon_content_description 0x7f10002e
+int string item_desc 0x7f100091
+int string item_title 0x7f100092
 int string item_view_role_description 0x7f10002f
 int string m3_sys_motion_easing_emphasized 0x7f100030
 int string m3_sys_motion_easing_emphasized_accelerate 0x7f100031
@@ -3469,6 +3486,7 @@ int string search_menu_title 0x7f10008c
 int string status_bar_notification_info_overflow 0x7f10008d
 int string title 0x7f10008e
 int string translate 0x7f10008f
+int string url 0x7f100093
 int style AlertDialog_AppCompat 0x7f110000
 int style AlertDialog_AppCompat_Light 0x7f110001
 int style Animation_AppCompat_Dialog 0x7f110002
