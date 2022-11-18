@@ -3,16 +3,16 @@ package com.example.taipeitour.utils
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import retrofit2.http.GET
 
 class ActivityUtils {
     companion object {
         fun replaceFragment(fragmentManager: FragmentManager, fragment: Fragment, containerId: Int) {
             fragmentManager.beginTransaction()
                 .replace(containerId, fragment)
-                .addToBackStack("Home")
+                .addToBackStack(null)
                 .commit()
         }
+
 
         fun addFragmentToActivity(fragmentManager: FragmentManager, fragment: Fragment, containerId: Int, hideCurrent: Boolean) {
             val transAction: FragmentTransaction = fragmentManager.beginTransaction()
@@ -30,6 +30,8 @@ class ActivityUtils {
                 transaction.hide(curFragment)
             }
         }
+
+
     }
 
 }

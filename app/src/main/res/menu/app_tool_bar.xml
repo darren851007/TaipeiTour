@@ -5,5 +5,5 @@
         android:title="@string/translate"
         android:id="@+id/edit"
         android:icon="@drawable/translate_icon"
-        app:showAsAction="ifRoom" />
+        app:showAsAction="always" />
 </menu>

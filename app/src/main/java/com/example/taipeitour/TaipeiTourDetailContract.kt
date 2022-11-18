@@ -6,6 +6,6 @@ interface TaipeiTourDetailContract {
     }
 
     interface Presenter {
-        fun getData(id: Int)
+
     }
 }

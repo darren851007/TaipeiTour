@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.taipeitour.app-mergeDebugResources-33:/values-ro/values-ro.xml",
+            "outputFile": "com.example.taipeitour.app-mergeDebugResources-34:/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "/Users/twipc00588003/.gradle/caches/transforms-3/205feb206244c8c1b4b56fcdc8d69988/transformed/core-1.8.0/res/values-ro/values-ro.xml",

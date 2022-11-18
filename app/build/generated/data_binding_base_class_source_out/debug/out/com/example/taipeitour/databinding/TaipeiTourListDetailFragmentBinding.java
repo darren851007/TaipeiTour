@@ -4,7 +4,10 @@ package com.example.taipeitour.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,7 +24,16 @@ public final class TaipeiTourListDetailFragmentBinding implements ViewBinding {
   private final CoordinatorLayout rootView;
 
   @NonNull
-  public final ImageView imageView;
+  public final ImageView ivDeetail;
+
+  @NonNull
+  public final ProgressBar progressBar;
+
+  @NonNull
+  public final ScrollView scrollView;
+
+  @NonNull
+  public final AppBarDetailToolbarBinding toolBar;
 
   @NonNull
   public final TextView tvDetailDesc;
@@ -38,16 +50,25 @@ public final class TaipeiTourListDetailFragmentBinding implements ViewBinding {
   @NonNull
   public final View viewDivider;
 
+  @NonNull
+  public final WebView webView;
+
   private TaipeiTourListDetailFragmentBinding(@NonNull CoordinatorLayout rootView,
-      @NonNull ImageView imageView, @NonNull TextView tvDetailDesc, @NonNull TextView tvDetailTitle,
-      @NonNull TextView tvUrl, @NonNull CoordinatorLayout tvWebUrl, @NonNull View viewDivider) {
+      @NonNull ImageView ivDeetail, @NonNull ProgressBar progressBar,
+      @NonNull ScrollView scrollView, @NonNull AppBarDetailToolbarBinding toolBar,
+      @NonNull TextView tvDetailDesc, @NonNull TextView tvDetailTitle, @NonNull TextView tvUrl,
+      @NonNull CoordinatorLayout tvWebUrl, @NonNull View viewDivider, @NonNull WebView webView) {
     this.rootView = rootView;
-    this.imageView = imageView;
+    this.ivDeetail = ivDeetail;
+    this.progressBar = progressBar;
+    this.scrollView = scrollView;
+    this.toolBar = toolBar;
     this.tvDetailDesc = tvDetailDesc;
     this.tvDetailTitle = tvDetailTitle;
     this.tvUrl = tvUrl;
     this.tvWebUrl = tvWebUrl;
     this.viewDivider = viewDivider;
+    this.webView = webView;
   }
 
   @Override
@@ -77,11 +98,30 @@ public final class TaipeiTourListDetailFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.imageView;
-      ImageView imageView = ViewBindings.findChildViewById(rootView, id);
-      if (imageView == null) {
+      id = R.id.iv_deetail;
+      ImageView ivDeetail = ViewBindings.findChildViewById(rootView, id);
+      if (ivDeetail == null) {
         break missingId;
       }
+
+      id = R.id.progressBar;
+      ProgressBar progressBar = ViewBindings.findChildViewById(rootView, id);
+      if (progressBar == null) {
+        break missingId;
+      }
+
+      id = R.id.scrollView;
+      ScrollView scrollView = ViewBindings.findChildViewById(rootView, id);
+      if (scrollView == null) {
+        break missingId;
+      }
+
+      id = R.id.tool_bar;
+      View toolBar = ViewBindings.findChildViewById(rootView, id);
+      if (toolBar == null) {
+        break missingId;
+      }
+      AppBarDetailToolbarBinding binding_toolBar = AppBarDetailToolbarBinding.bind(toolBar);
 
       id = R.id.tv_detail_desc;
       TextView tvDetailDesc = ViewBindings.findChildViewById(rootView, id);
@@ -109,8 +149,15 @@ public final class TaipeiTourListDetailFragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TaipeiTourListDetailFragmentBinding((CoordinatorLayout) rootView, imageView,
-          tvDetailDesc, tvDetailTitle, tvUrl, tvWebUrl, viewDivider);
+      id = R.id.webView;
+      WebView webView = ViewBindings.findChildViewById(rootView, id);
+      if (webView == null) {
+        break missingId;
+      }
+
+      return new TaipeiTourListDetailFragmentBinding((CoordinatorLayout) rootView, ivDeetail,
+          progressBar, scrollView, binding_toolBar, tvDetailDesc, tvDetailTitle, tvUrl, tvWebUrl,
+          viewDivider, webView);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

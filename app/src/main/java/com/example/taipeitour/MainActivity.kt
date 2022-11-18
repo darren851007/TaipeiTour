@@ -3,6 +3,7 @@ package com.example.taipeitour
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.taipeitour.databinding.ActivityMainBinding
+import com.example.taipeitour.model.DataItem
 import com.example.taipeitour.utils.ActivityUtils
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 //        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, TaipeiTourListFragment.newInstance() as Fragment).commit()
     }
 
-     fun goToDetail() {
-        ActivityUtils.addFragmentToActivity(supportFragmentManager, TaipeiTourDetailFragment.newInstance(), R.id.fragment_container, true)
+     fun goToDetail(item: DataItem) {
+        ActivityUtils.addFragmentToActivity(supportFragmentManager, TaipeiTourDetailFragment.newInstance(item), R.id.fragment_container, true)
     }
 }

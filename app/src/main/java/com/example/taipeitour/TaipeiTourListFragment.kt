@@ -8,15 +8,21 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taipeitour.databinding.TaipeiTourListFragmentBinding
-import com.example.taipeitour.utils.ActivityUtils
+import com.example.taipeitour.model.DataItem
+import com.example.taipeitour.model.TaipeiTourModel
 import com.example.taipeitourimport.TaipeiTourListAdapter
 
 class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTourListAdapter.CustomListeners{
 
     private lateinit var binding: TaipeiTourListFragmentBinding
+    private val taipeiTourAdapter by lazy {
+        TaipeiTourListAdapter(this)
+    }
     private val presenter: TaipeiTourListContract.Presenter? by lazy {
         TaipeiTourListPresenter(this)
     }
+
+
     companion object {
         fun newInstance(): TaipeiTourListFragment {
             return TaipeiTourListFragment()
@@ -24,12 +30,13 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTo
     }
 
     private fun setRecyclerView() {
-        val adapter = TaipeiTourListAdapter(this)
+        presenter?.getData()
+        binding.apply {
+            rvTaipeiTour.apply {
+                layoutManager = LinearLayoutManager(context)
+                adapter = taipeiTourAdapter
+            }
 
-        binding.rvTaipeiTour.apply {
-            this.adapter = adapter
-            layoutManager = LinearLayoutManager(context)
-            presenter?.loadData()?.let { adapter.submitList(it) }
         }
     }
 
@@ -45,13 +52,30 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         setRecyclerView()
+        binding.toolBar.toolBar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.edit -> {
+                    Toast.makeText(context, "OnClick", Toast.LENGTH_SHORT).show()
+                }
+            }
+            false
+        }
     }
 
-    override fun onItemSelected(position: Int) {
-        Toast.makeText(context, "Position = $position", Toast.LENGTH_SHORT).show()
-        (activity as MainActivity).goToDetail()
+    private fun initView() {
+
     }
 
+    override fun onItemSelected(item: DataItem) {
+//        Toast.makeText(context, "Position = $position", Toast.LENGTH_SHORT).show()
+        (activity as MainActivity).goToDetail(item)
+    }
+
+
+    override fun bindData(response: List<DataItem>) {
+        taipeiTourAdapter.submitList(response)
+    }
 
 
 }
+
