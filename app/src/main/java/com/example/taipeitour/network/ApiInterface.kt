@@ -5,9 +5,10 @@ import com.example.taipeitour.model.TaipeiTourModel
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Part
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiInterface {
-    @GET("zh-tw/Attractions/All")
-    fun getAttractions(): Call<TaipeiTourModel>
+    @GET("{lang}/Attractions/All")
+    fun getAttractions(@Path(value = "lang") lang: String): Call<TaipeiTourModel>
 }

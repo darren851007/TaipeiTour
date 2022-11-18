@@ -65,6 +65,7 @@ int animator mtrl_fab_hide_motion_spec 0x7f02001b
 int animator mtrl_fab_show_motion_spec 0x7f02001c
 int animator mtrl_fab_transformation_sheet_collapse_spec 0x7f02001d
 int animator mtrl_fab_transformation_sheet_expand_spec 0x7f02001e
+int array lang_array 0x7f140000
 int attr SharedValue 0x7f030000
 int attr SharedValueId 0x7f030001
 int attr actionBarDivider 0x7f030002

@@ -5,6 +5,7 @@ import com.example.taipeitour.model.DataItem
 import com.example.taipeitour.model.TaipeiTourModel
 import com.example.taipeitour.network.APiClientManager
 import com.example.taipeitour.network.ApiInterface
+import com.example.taipeitour.network.Config
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -27,9 +28,9 @@ class TaipeiTourListPresenter(private val view: TaipeiTourListContract.View): Ta
         return nameList
     }
 
-    override fun getData() {
+    override fun getData(lang: String) {
         val apiService = APiClientManager.client.create(ApiInterface::class.java)
-        apiService.getAttractions().enqueue(object : Callback<TaipeiTourModel> {
+        apiService.getAttractions(lang).enqueue(object : Callback<TaipeiTourModel> {
             override fun onResponse(
                 call: Call<TaipeiTourModel>,
                 response: Response<TaipeiTourModel>
@@ -47,4 +48,5 @@ class TaipeiTourListPresenter(private val view: TaipeiTourListContract.View): Ta
             }
         })
     }
+
 }

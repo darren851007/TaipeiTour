@@ -14,5 +14,4 @@ object Config {
         Pair("VI", "vi")
     )
 
-
 }

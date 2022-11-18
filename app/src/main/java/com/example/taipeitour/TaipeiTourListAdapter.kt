@@ -14,11 +14,33 @@ import com.example.taipeitour.R
 import com.example.taipeitour.TaipeiTourListFragment
 import com.example.taipeitour.TaipeiTourListModel1
 import com.example.taipeitour.databinding.ListItemBinding
+import com.example.taipeitour.databinding.TaipeiTourListFragmentBinding
 import com.example.taipeitour.model.DataItem
 import com.example.taipeitour.model.ImagesItem
 import com.example.taipeitour.model.TaipeiTourModel
+import okhttp3.internal.notifyAll
 
-class TaipeiTourListAdapter(private val customListeners: CustomListeners) : RecyclerView.Adapter<TaipeiTourListAdapter.TaipeiTourListViewHolder>() {
+class TaipeiTourListAdapter(
+    private val listener: CustomListeners
+    ) : RecyclerView.Adapter<TaipeiTourListAdapter.TaipeiTourListViewHolder>() {
+    private val dataList = AsyncListDiffer<Any>(this, object : DiffUtil.ItemCallback<Any>() {
+        override fun areItemsTheSame(oldItem: Any, newItem: Any): Boolean {
+            return oldItem == newItem
+        }
+
+        override fun areContentsTheSame(oldItem: Any, newItem: Any): Boolean {
+            return if (oldItem == newItem && oldItem is DataItem) {
+                try {
+                    return oldItem.hashCode() == (newItem as DataItem).hashCode()
+                } catch (e: Exception) {
+                    return false
+                }
+            } else {
+                false
+            }
+        }
+
+    })
     private lateinit var mContext: Context
     private val diffUtilItemCallback = object : DiffUtil.ItemCallback<DataItem>() {
         //pk is the primary key for the data class.
@@ -34,40 +56,60 @@ class TaipeiTourListAdapter(private val customListeners: CustomListeners) : Recy
             oldItem: DataItem,
             newItem: DataItem
         ): Boolean {
-            return oldItem == newItem
+            return when {
+                oldItem.id != newItem.id -> {
+                    false
+                }
+                oldItem.name != newItem.name -> {
+                    false
+                }
+                oldItem.introduction != newItem.introduction -> {
+                    false
+                }
+                else -> {
+                    true
+                }
+            }
+
+
+
+//            return oldItem == newItem
         }
     }
-    private val listDiffer = AsyncListDiffer(this, diffUtilItemCallback)
 
 
-    private lateinit var binding: ListItemBinding
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaipeiTourListAdapter.TaipeiTourListViewHolder {
-        binding = ListItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaipeiTourListViewHolder {
+        val binding = ListItemBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
         mContext = parent.context
-        return TaipeiTourListViewHolder(customListeners)
+        return TaipeiTourListViewHolder(binding)
 
     }
 
     override fun onBindViewHolder(holder: TaipeiTourListViewHolder, position: Int) {
-        holder.bind(listDiffer.currentList[position])
-        holder.setIsRecyclable(false)
+        val item = dataList.currentList[position]
+        holder.bind(item as DataItem)
     }
 
     override fun getItemCount(): Int {
-        return listDiffer.currentList.size
+        return dataList.currentList.size
     }
 
     fun submitList(list: List<DataItem>) {
-        listDiffer.submitList(list)
+        dataList.submitList(list)
     }
 
-    inner class TaipeiTourListViewHolder(private val customListeners: CustomListeners) : RecyclerView.ViewHolder(binding.root) {
+    inner class TaipeiTourListViewHolder(val binding: ListItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: DataItem) {
             //Custom onClick for whole item onClick
             binding.root.setOnClickListener {
                 //Pass respective parameter, adapterPosition or pk.
-                customListeners.onItemSelected(item)
+                listener.onItemSelected(item)
             }
 
             //TODO : Bind your data to views here.
@@ -89,13 +131,8 @@ class TaipeiTourListAdapter(private val customListeners: CustomListeners) : Recy
             }
         }
     }
-    // Interface to be inherited by view to provide
-    //custom listeners for each item based on position
-    //or other custom parameters (ex : Primary key)
 
     interface CustomListeners {
         fun onItemSelected(item: DataItem)
-        // add your view listeners here
-        // ex : fun onSwitchChecked(..) , fun onItemLongPress(..)
     }
 }

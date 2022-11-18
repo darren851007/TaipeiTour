@@ -6,4 +6,16 @@
     <string name="item_title">標題</string>
     <string name="item_desc">內容</string>
     <string name="url">URL</string>
+
+    <string-array name="lang_array">
+        <item>繁體中文</item>
+        <item>簡體中文</item>
+        <item>英文</item>
+        <item>日文</item>
+        <item>韓文</item>
+        <item>西班牙文</item>
+        <item>印尼文</item>
+        <item>泰文</item>
+        <item>越南文</item>
+    </string-array>
 </resources>
