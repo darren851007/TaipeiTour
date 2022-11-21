@@ -14,17 +14,22 @@ class APiClientManager {
     private val okHttpClient = createOkHttpClient()
 
     init {
-                retrofit = Retrofit.Builder()
-                    .baseUrl(Config.BASE_URL)
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .client(okHttpClient)
-                    .build()
+        retrofit = Retrofit.Builder()
+            .baseUrl(Config.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient)
+            .build()
     }
 
     private fun createOkHttpClient(): OkHttpClient {
         val logging: HttpLoggingInterceptor =
-            HttpLoggingInterceptor().setLevel(if(BuildConfig.DEBUG){HttpLoggingInterceptor.Level.BODY}else
-            {HttpLoggingInterceptor.Level.NONE})
+            HttpLoggingInterceptor().setLevel(
+                if (BuildConfig.DEBUG) {
+                    HttpLoggingInterceptor.Level.BODY
+                } else {
+                    HttpLoggingInterceptor.Level.NONE
+                }
+            )
         return OkHttpClient.Builder()
             .addInterceptor(logging)
             .addInterceptor(Interceptor { chain ->

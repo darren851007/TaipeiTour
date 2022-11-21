@@ -1,174 +1,166 @@
 [
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/xml_backup_rules.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/xml/backup_rules.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/layout_taipei_tour_list_detail_fragment.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/layout/taipei_tour_list_detail_fragment.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxhdpi_ic_no_image_icon.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-xxhdpi/ic_no_image_icon.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable_ic_no_image_icon_foreground.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/drawable/ic_no_image_icon_foreground.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-xhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-hdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-hdpi_ic_launcher.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-hdpi/ic_launcher.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-anydpi-v26_ic_no_image_icon.xml.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-anydpi-v26/ic_no_image_icon.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-xxxhdpi/ic_launcher.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxxhdpi_ic_no_image_icon.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-xxxhdpi/ic_no_image_icon.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-hdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-hdpi/ic_launcher_round.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/xml_backup_rules.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/xml/backup_rules.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-mdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-mdpi/ic_launcher_round.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/layout_activity_main.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/layout_app_bar_layout.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/layout/app_bar_layout.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable_navigate_next.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/drawable/navigate_next.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xhdpi_ic_no_image_icon.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-xhdpi/ic_no_image_icon.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-anydpi-v26_ic_no_image_icon_round.xml.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-anydpi-v26/ic_no_image_icon_round.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-anydpi-v26_ic_no_image_icon.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-anydpi-v26/ic_no_image_icon.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-xhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxhdpi_ic_launcher.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-xxhdpi/ic_launcher.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxxhdpi_ic_no_image_icon_round.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-xxxhdpi/ic_no_image_icon_round.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable_navigate_next.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/drawable/navigate_next.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/xml/data_extraction_rules.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-hdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxhdpi_ic_no_image_icon.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-xxhdpi/ic_no_image_icon.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-hdpi_ic_no_image_icon_round.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-hdpi/ic_no_image_icon_round.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/menu_app_tool_bar.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/menu/app_tool_bar.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-xxxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxhdpi_ic_no_image_icon_round.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-xxhdpi/ic_no_image_icon_round.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxhdpi_ic_no_image_icon_round.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-xxhdpi/ic_no_image_icon_round.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-xhdpi/ic_launcher_round.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/layout_taipei_tour_list_detail_fragment.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/layout/taipei_tour_list_detail_fragment.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-mdpi_ic_no_image_icon_round.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-mdpi/ic_no_image_icon_round.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-xxxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/layout_activity_main.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/layout/activity_main.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-mdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xhdpi_ic_no_image_icon_round.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-xhdpi/ic_no_image_icon_round.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-mdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable_translate_icon.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/drawable/translate_icon.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/layout_app_bar_detail_toolbar.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/layout/app_bar_detail_toolbar.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable_ic_launcher_background.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/drawable/ic_launcher_background.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/layout_app_bar_layout.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/layout/app_bar_layout.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxxhdpi_ic_no_image_icon.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-xxxhdpi/ic_no_image_icon.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-mdpi_ic_no_image_icon.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-mdpi/ic_no_image_icon.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/layout_list_item.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/layout/list_item.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xhdpi_ic_no_image_icon.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-xhdpi/ic_no_image_icon.png"
     },
     {
-        "merged": "com.example.taipeitour.app-merged_res-36:/layout_app_bar_layout.xml.flat",
-        "source": "com.example.taipeitour.app-main-38:/layout/app_bar_layout.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable_leading_icon.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/drawable/leading_icon.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable_bg_shadow_glay.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/drawable/bg_shadow_glay.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-mdpi_ic_no_image_icon_round.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-mdpi/ic_no_image_icon_round.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-xxxhdpi/ic_launcher_round.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable_bg_shadow_glay.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/drawable/bg_shadow_glay.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-pngs-31:/drawable-anydpi-v24/ic_launcher_foreground.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-xxhdpi/ic_launcher.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/layout_app_bar_detail_toolbar.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/layout/app_bar_detail_toolbar.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable_ic_no_image_icon_background.xml.flat",
+        "source": "com.example.taipeitour.app-debug-38:/drawable/ic_no_image_icon_background.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-hdpi_ic_no_image_icon_round.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-hdpi/ic_no_image_icon_round.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable_ic_no_image_icon_foreground.xml.flat",
+        "source": "com.example.taipeitour.app-debug-38:/drawable/ic_no_image_icon_foreground.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxxhdpi_ic_no_image_icon_round.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-xxxhdpi/ic_no_image_icon_round.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable_translate_icon.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/drawable/translate_icon.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-anydpi-v26_ic_no_image_icon_round.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-anydpi-v26/ic_no_image_icon_round.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "com.example.taipeitour.app-pngs-32:/drawable-anydpi-v24/ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.taipeitour.app-merged_res-36:/menu_app_tool_bar.xml.flat",
-        "source": "com.example.taipeitour.app-main-38:/menu/app_tool_bar.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/drawable/ic_launcher_background.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-hdpi_ic_no_image_icon.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-hdpi/ic_no_image_icon.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-mdpi_ic_launcher.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-mdpi/ic_launcher.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xhdpi_ic_no_image_icon_round.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-xhdpi/ic_no_image_icon_round.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/xml_data_extraction_rules.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/xml/data_extraction_rules.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-hdpi_ic_no_image_icon.png.flat",
+        "source": "com.example.taipeitour.app-debug-38:/mipmap-hdpi/ic_no_image_icon.png"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xhdpi_ic_launcher.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-xhdpi/ic_launcher.webp"
+        "merged": "com.example.taipeitour.app-merged_res-37:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.taipeitour.app-main-39:/mipmap-xxhdpi/ic_launcher_round.webp"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/layout_taipei_tour_list_fragment.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/layout/taipei_tour_list_fragment.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/menu_app_tool_bar.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/menu/app_tool_bar.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable_leading_icon.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/drawable/leading_icon.xml"
+        "merged": "com.example.taipeitour.app-merged_res-37:/layout_list_item.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/layout/list_item.xml"
     },
     {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/drawable_ic_no_image_icon_background.xml.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/drawable/ic_no_image_icon_background.xml"
-    },
-    {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-main-38:/mipmap-xxhdpi/ic_launcher_round.webp"
-    },
-    {
-        "merged": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-merged_res-36:/mipmap-mdpi_ic_no_image_icon.png.flat",
-        "source": "/Users/twipc00588003/.gradle/daemon/7.4/com.example.taipeitour.app-debug-37:/mipmap-mdpi/ic_no_image_icon.png"
+        "merged": "com.example.taipeitour.app-merged_res-37:/layout_taipei_tour_list_fragment.xml.flat",
+        "source": "com.example.taipeitour.app-main-39:/layout/taipei_tour_list_fragment.xml"
     }
 ]

@@ -11,26 +11,27 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class TaipeiTourListPresenter(private val view: TaipeiTourListContract.View): TaipeiTourListContract.Presenter {
-    override fun loadData(): MutableList<TaipeiTourListModel1> {
-        val nameList: MutableList<TaipeiTourListModel1> = mutableListOf()
-        nameList.add(TaipeiTourListModel1(1, "title1", "desc1"))
-        nameList.add(TaipeiTourListModel1(50, "title2", "desc2"))
-        nameList.add(TaipeiTourListModel1(3, "title3", "desc3"))
-        nameList.add(TaipeiTourListModel1(43, "title4", "desc4"))
-        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
-        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
-        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
-        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
-        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
-        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
-        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
 
-        return nameList
-    }
+//    override fun loadData(): MutableList<TaipeiTourListModel1> {
+//        val nameList: MutableList<TaipeiTourListModel1> = mutableListOf()
+//        nameList.add(TaipeiTourListModel1(1, "title1", "desc1"))
+//        nameList.add(TaipeiTourListModel1(50, "title2", "desc2"))
+//        nameList.add(TaipeiTourListModel1(3, "title3", "desc3"))
+//        nameList.add(TaipeiTourListModel1(43, "title4", "desc4"))
+//        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
+//        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
+//        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
+//        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
+//        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
+//        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
+//        nameList.add(TaipeiTourListModel1(500, "title5", "desc5"))
+//
+//        return nameList
+//    }
 
-    override fun getData(lang: String) {
-        val apiService = APiClientManager.client.create(ApiInterface::class.java)
-        apiService.getAttractions(lang).enqueue(object : Callback<TaipeiTourModel> {
+    override fun getData(lang: String, page: Int) {
+        val apiService = APiClientManager.client.create(ApiInterface::class.java) // need to refactor
+        apiService.getAttractions(lang, page).enqueue(object : Callback<TaipeiTourModel> {
             override fun onResponse(
                 call: Call<TaipeiTourModel>,
                 response: Response<TaipeiTourModel>

@@ -10,5 +10,5 @@ import retrofit2.http.Query
 
 interface ApiInterface {
     @GET("{lang}/Attractions/All")
-    fun getAttractions(@Path(value = "lang") lang: String): Call<TaipeiTourModel>
+    fun getAttractions(@Path(value = "lang",) lang: String, @Query(value = "page") page: Int): Call<TaipeiTourModel>
 }

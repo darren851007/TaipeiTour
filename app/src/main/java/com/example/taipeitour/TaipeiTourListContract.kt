@@ -9,7 +9,7 @@ interface TaipeiTourListContract {
     }
 
     interface Presenter {
-        fun loadData(): List<TaipeiTourListModel1>
-        fun getData(lang:String)
+//        fun loadData(): List<TaipeiTourListModel1>
+        fun getData(lang:String, page: Int)
     }
 }

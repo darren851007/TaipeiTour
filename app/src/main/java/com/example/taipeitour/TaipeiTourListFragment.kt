@@ -19,6 +19,7 @@ import kotlinx.coroutines.NonDisposableHandle.parent
 class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTourListAdapter.CustomListeners{
 
     private lateinit var binding: TaipeiTourListFragmentBinding
+    private var page = 1
     private val taipeiTourAdapter by lazy {
         TaipeiTourListAdapter(this)
     }
@@ -43,8 +44,8 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTo
         const val VI = 8
     }
 
-    private fun setRecyclerView(key: String) {
-        presenter?.getData(Config.LANGUAGE.getValue(key))
+    private fun setRecyclerView(key: String, page: Int) {
+        presenter?.getData(Config.LANGUAGE.getValue(key), page)
         binding.apply {
             rvTaipeiTour.apply {
                 layoutManager = LinearLayoutManager(context)
@@ -66,7 +67,7 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTo
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         // Default Language
-        setRecyclerView("ZH_TW")
+        setRecyclerView("ZH_TW",page)
         binding.toolBar.toolBar.setOnMenuItemClickListener {
             when (it.itemId) {
                 R.id.edit -> {
@@ -79,39 +80,39 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTo
                         when (position) {
                             ZH_TW -> {
                                 Log.i("List", Config.LANGUAGE["ZH_TW"].toString())
-                                setRecyclerView("ZH_TW")
+                                setRecyclerView("ZH_TW",1)
                             }
                             ZH_CN -> {
                                 Log.i("List", lang[1])
-                                setRecyclerView("ZH_CN")
+                                setRecyclerView("ZH_CN",1)
                             }
                             EN -> {
                                 Log.i("List", lang[2])
-                                setRecyclerView("EN")
+                                setRecyclerView("EN",1)
                             }
                             JP -> {
                                 Log.i("List", lang[3])
-                                setRecyclerView("JP")
+                                setRecyclerView("JP",1)
                             }
                             KO -> {
                                 Log.i("List", lang[4])
-                                setRecyclerView("KO")
+                                setRecyclerView("KO",1)
                             }
                             ES -> {
                                 Log.i("List", lang[5])
-                                setRecyclerView("ES")
+                                setRecyclerView("ES",1)
                             }
                             ID -> {
                                 Log.i("List", lang[6])
-                                setRecyclerView("ID")
+                                setRecyclerView("ID",1)
                             }
                             TH -> {
                                 Log.i("List", lang[7])
-                                setRecyclerView("TH")
+                                setRecyclerView("TH",1)
                             }
                             VI -> {
                                 Log.i("List", lang[8])
-                                setRecyclerView("VI")
+                                setRecyclerView("VI",1)
                             }
                         }
 
@@ -128,6 +129,7 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View, TaipeiTo
 
     override fun onItemSelected(item: DataItem) {
         (activity as MainActivity).goToDetail(item)
+
     }
 
 
