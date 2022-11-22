@@ -1,19 +1,13 @@
 package com.example.taipeitour
 
-import android.content.Context
 import android.util.Log
-import android.widget.Toast
 import com.example.taipeitour.model.DataItem
 import com.example.taipeitour.model.TaipeiTourModel
-import com.example.taipeitour.network.APiClientManager
 import com.example.taipeitour.network.ApiInterface
-import com.example.taipeitour.network.Config
 import com.example.taipeitour.network.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.Retrofit
-import kotlin.coroutines.coroutineContext
 
 class TaipeiTourListPresenter(private val view: TaipeiTourListContract.View): TaipeiTourListContract.Presenter {
 
@@ -35,27 +29,6 @@ class TaipeiTourListPresenter(private val view: TaipeiTourListContract.View): Ta
 //    }
 
     override fun getData(lang: String, page: Int) {
-        val apiService = APiClientManager.client.create(ApiInterface::class.java)
-        apiService.getAttractions(lang, page).enqueue(object : Callback<TaipeiTourModel> {
-            override fun onResponse(
-                call: Call<TaipeiTourModel>,
-                response: Response<TaipeiTourModel>
-            ) {
-                if (response.isSuccessful) {
-                    Log.d("Response", response.body().toString())
-                    response.body()?.data?.let { view.bindData(it as ArrayList<DataItem>) }
-                } else {
-                    Log.e("Response", "Error")
-                }
-            }
-
-            override fun onFailure(call: Call<TaipeiTourModel>, t: Throwable) {
-                Log.e("Response", t.message.toString())
-            }
-        })
-    }
-
-    override fun getData2(lang: String, page: Int) {
         RetrofitClient.instance.getAttractions(lang = lang, page = page).enqueue(object : Callback<TaipeiTourModel> {
             override fun onResponse(
                 call: Call<TaipeiTourModel>,

@@ -10,6 +10,5 @@ interface TaipeiTourListContract {
 
     interface Presenter {
         fun getData(lang: String, page: Int)
-        fun getData2(lang: String, page: Int)
     }
 }

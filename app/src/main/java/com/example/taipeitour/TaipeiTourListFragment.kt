@@ -52,7 +52,7 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
 
     private fun setRecyclerView(key: String, page: Int) {
 
-        presenter?.getData2(Config.LANGUAGE.getValue(key), page)
+        presenter?.getData(Config.LANGUAGE.getValue(key), page)
         binding.apply {
             rvTaipeiTour.apply {
                 layoutManager = LinearLayoutManager(context)
@@ -145,7 +145,7 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
                     binding.loading.pbBar.visibility = View.VISIBLE
                     Log.e("Lang", lang[0].toString())
                     Log.e("Page", page.toString())
-                    presenter?.getData2("zh-tw", page)
+                    presenter?.getData("zh-tw", page)
                 }
             }
 
