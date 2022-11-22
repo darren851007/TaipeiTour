@@ -6,7 +6,7 @@ object Config {
         Pair("ZH_TW", "zh-tw"),
         Pair("ZH_CN", "zh-cn"),
         Pair("EN", "en"),
-        Pair("JP", "jp"),
+        Pair("JA", "ja"),
         Pair("KO", "ko"),
         Pair("ES", "es"),
         Pair("ID", "id"),

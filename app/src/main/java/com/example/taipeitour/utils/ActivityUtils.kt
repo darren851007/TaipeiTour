@@ -20,7 +20,7 @@ class ActivityUtils {
                 hideCurrentFragment(fragmentManager, containerId, transAction)
             }
                 transAction.add(containerId, fragment)
-                transAction.addToBackStack("Home")
+                transAction.addToBackStack(null)
             transAction.commit()
         }
 

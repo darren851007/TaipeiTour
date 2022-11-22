@@ -68,7 +68,7 @@ class TaipeiTourDetailFragment: Fragment(), TaipeiTourDetailContract.View {
                         .into(ivDeetail)
                 }
                 tvDetailTitle.text = data.name
-                tvDetailDesc.text = data.introduction
+                tvDetailDesc.text = data.introduction.replace("&nbsp;", " ")
                 tvUrl.text = url
                 tvUrl.setOnClickListener {
                     startWebView(url)

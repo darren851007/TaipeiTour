@@ -19,11 +19,15 @@ drawable leading_icon
 drawable navigate_next
 drawable translate_icon
 id app_bar
+id button2
 id edit
 id fragment_container
 id iv_deetail
 id iv_detail
 id iv_picture
+id loading
+id nestSV
+id pb_bar
 id progressBar
 id rv_taipei_tour
 id scrollView
@@ -39,6 +43,7 @@ id webView
 layout activity_main
 layout app_bar_detail_toolbar
 layout app_bar_layout
+layout item_loading
 layout list_item
 layout taipei_tour_list_detail_fragment
 layout taipei_tour_list_fragment

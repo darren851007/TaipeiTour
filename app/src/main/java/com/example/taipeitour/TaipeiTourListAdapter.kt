@@ -9,16 +9,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import com.bumptech.glide.Glide
-import com.example.taipeitour.MainActivity
 import com.example.taipeitour.R
-import com.example.taipeitour.TaipeiTourListFragment
-import com.example.taipeitour.TaipeiTourListModel1
 import com.example.taipeitour.databinding.ListItemBinding
-import com.example.taipeitour.databinding.TaipeiTourListFragmentBinding
 import com.example.taipeitour.model.DataItem
-import com.example.taipeitour.model.ImagesItem
-import com.example.taipeitour.model.TaipeiTourModel
-import okhttp3.internal.notifyAll
 
 class TaipeiTourListAdapter(
     private val listener: CustomListeners
@@ -41,6 +34,17 @@ class TaipeiTourListAdapter(
         }
 
     })
+    companion object {
+        private const val VIEW_TYPE_LOADING = 0
+        private const val VIEW_TYPE_ITEM = 1
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return when {
+            dataList.currentList.get(position) == null -> VIEW_TYPE_LOADING
+            else -> VIEW_TYPE_ITEM
+        }
+    }
     private lateinit var mContext: Context
     private val diffUtilItemCallback = object : DiffUtil.ItemCallback<DataItem>() {
         //pk is the primary key for the data class.
@@ -70,9 +74,6 @@ class TaipeiTourListAdapter(
                     true
                 }
             }
-
-
-
 //            return oldItem == newItem
         }
     }
@@ -126,6 +127,7 @@ class TaipeiTourListAdapter(
                         .load(R.mipmap.ic_no_image_icon_round)
                         .into(ivPicture)
                 }
+
 
                 Log.i("API", item.images.toString())
             }

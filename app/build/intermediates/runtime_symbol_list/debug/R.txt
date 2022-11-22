@@ -2747,6 +2747,7 @@ int id bounce 0x7f08005e
 int id bounceBoth 0x7f08005f
 int id bounceEnd 0x7f080060
 int id bounceStart 0x7f080061
+int id button2 0x7f0801f5
 int id buttonPanel 0x7f080062
 int id cache_measures 0x7f080063
 int id callMeasure 0x7f080064
@@ -2893,6 +2894,7 @@ int id line3 0x7f0800eb
 int id linear 0x7f0800ec
 int id listMode 0x7f0800ed
 int id list_item 0x7f0800ee
+int id loading 0x7f0801f6
 int id marquee 0x7f0800ef
 int id masked 0x7f0800f0
 int id match_constraint 0x7f0800f1
@@ -2957,6 +2959,7 @@ int id navigation_bar_item_labels_group 0x7f08012b
 int id navigation_bar_item_large_label_view 0x7f08012c
 int id navigation_bar_item_small_label_view 0x7f08012d
 int id navigation_header_container 0x7f08012e
+int id nestSV 0x7f0801f7
 int id never 0x7f08012f
 int id neverCompleteToEnd 0x7f080130
 int id neverCompleteToStart 0x7f080131
@@ -2983,6 +2986,7 @@ int id parent_matrix 0x7f080145
 int id password_toggle 0x7f080146
 int id path 0x7f080147
 int id pathRelative 0x7f080148
+int id pb_bar 0x7f0801f4
 int id peekHeight 0x7f080149
 int id percent 0x7f08014a
 int id pin 0x7f08014b
@@ -3283,6 +3287,7 @@ int layout design_navigation_menu 0x7f0b002a
 int layout design_navigation_menu_item 0x7f0b002b
 int layout design_text_input_end_icon 0x7f0b002c
 int layout design_text_input_start_icon 0x7f0b002d
+int layout item_loading 0x7f0b006c
 int layout list_item 0x7f0b006a
 int layout m3_alert_dialog 0x7f0b002e
 int layout m3_alert_dialog_actions 0x7f0b002f

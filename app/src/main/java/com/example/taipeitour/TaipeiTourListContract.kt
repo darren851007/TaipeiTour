@@ -5,11 +5,11 @@ import com.example.taipeitour.model.TaipeiTourModel
 
 interface TaipeiTourListContract {
     interface View {
-        fun bindData(response: List<DataItem>)
+        fun bindData(response: ArrayList<DataItem>)
     }
 
     interface Presenter {
-//        fun loadData(): List<TaipeiTourListModel1>
-        fun getData(lang:String, page: Int)
+        fun getData(lang: String, page: Int)
+        fun getData2(lang: String, page: Int)
     }
 }
