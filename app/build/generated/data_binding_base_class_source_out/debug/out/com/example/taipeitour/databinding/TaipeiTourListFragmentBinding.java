@@ -4,7 +4,7 @@ package com.example.taipeitour.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
@@ -18,10 +18,7 @@ import java.lang.String;
 
 public final class TaipeiTourListFragmentBinding implements ViewBinding {
   @NonNull
-  private final NestedScrollView rootView;
-
-  @NonNull
-  public final Button button2;
+  private final LinearLayout rootView;
 
   @NonNull
   public final ItemLoadingBinding loading;
@@ -38,12 +35,11 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
   @NonNull
   public final View viewDivider;
 
-  private TaipeiTourListFragmentBinding(@NonNull NestedScrollView rootView, @NonNull Button button2,
+  private TaipeiTourListFragmentBinding(@NonNull LinearLayout rootView,
       @NonNull ItemLoadingBinding loading, @NonNull NestedScrollView nestSV,
       @NonNull RecyclerView rvTaipeiTour, @NonNull AppBarLayoutBinding toolBar,
       @NonNull View viewDivider) {
     this.rootView = rootView;
-    this.button2 = button2;
     this.loading = loading;
     this.nestSV = nestSV;
     this.rvTaipeiTour = rvTaipeiTour;
@@ -53,7 +49,7 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public NestedScrollView getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -78,12 +74,6 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.button2;
-      Button button2 = ViewBindings.findChildViewById(rootView, id);
-      if (button2 == null) {
-        break missingId;
-      }
-
       id = R.id.loading;
       View loading = ViewBindings.findChildViewById(rootView, id);
       if (loading == null) {
@@ -91,7 +81,11 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
       }
       ItemLoadingBinding binding_loading = ItemLoadingBinding.bind(loading);
 
-      NestedScrollView nestSV = (NestedScrollView) rootView;
+      id = R.id.nestSV;
+      NestedScrollView nestSV = ViewBindings.findChildViewById(rootView, id);
+      if (nestSV == null) {
+        break missingId;
+      }
 
       id = R.id.rv_taipei_tour;
       RecyclerView rvTaipeiTour = ViewBindings.findChildViewById(rootView, id);
@@ -112,8 +106,8 @@ public final class TaipeiTourListFragmentBinding implements ViewBinding {
         break missingId;
       }
 
-      return new TaipeiTourListFragmentBinding((NestedScrollView) rootView, button2,
-          binding_loading, nestSV, rvTaipeiTour, binding_toolBar, viewDivider);
+      return new TaipeiTourListFragmentBinding((LinearLayout) rootView, binding_loading, nestSV,
+          rvTaipeiTour, binding_toolBar, viewDivider);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -19,7 +19,6 @@ drawable leading_icon
 drawable navigate_next
 drawable translate_icon
 id app_bar
-id button2
 id edit
 id fragment_container
 id iv_deetail

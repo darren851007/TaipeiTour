@@ -15,25 +15,18 @@ import com.example.taipeitour.model.DataItem
 
 class TaipeiTourListAdapter(
     private val listener: CustomListeners
-    ) : RecyclerView.Adapter<TaipeiTourListAdapter.TaipeiTourListViewHolder>() {
-    private val dataList = AsyncListDiffer<Any>(this, object : DiffUtil.ItemCallback<Any>() {
-        override fun areItemsTheSame(oldItem: Any, newItem: Any): Boolean {
-            return oldItem == newItem
-        }
-
-        override fun areContentsTheSame(oldItem: Any, newItem: Any): Boolean {
-            return if (oldItem == newItem && oldItem is DataItem) {
-                try {
-                    return oldItem.hashCode() == (newItem as DataItem).hashCode()
-                } catch (e: Exception) {
-                    return false
-                }
-            } else {
-                false
+) : RecyclerView.Adapter<TaipeiTourListAdapter.TaipeiTourListViewHolder>() {
+    private val dataList =
+        AsyncListDiffer<DataItem>(this, object : DiffUtil.ItemCallback<DataItem>() {
+            override fun areItemsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {
+                return oldItem.id == newItem.id
             }
-        }
 
-    })
+            override fun areContentsTheSame(oldItem: DataItem, newItem: DataItem): Boolean {
+                return oldItem.equals(newItem)
+            }
+        })
+
     companion object {
         private const val VIEW_TYPE_LOADING = 0
         private const val VIEW_TYPE_ITEM = 1
@@ -45,38 +38,8 @@ class TaipeiTourListAdapter(
             else -> VIEW_TYPE_ITEM
         }
     }
-    private lateinit var mContext: Context
-    private val diffUtilItemCallback = object : DiffUtil.ItemCallback<DataItem>() {
-        //pk is the primary key for the data class.
-        //replace with any unique identifier of your specific data class.
-        override fun areItemsTheSame(
-            oldItem: DataItem,
-            newItem: DataItem
-        ): Boolean {
-            return oldItem.id == newItem.id
-        }
 
-        override fun areContentsTheSame(
-            oldItem: DataItem,
-            newItem: DataItem
-        ): Boolean {
-            return when {
-                oldItem.id != newItem.id -> {
-                    false
-                }
-                oldItem.name != newItem.name -> {
-                    false
-                }
-                oldItem.introduction != newItem.introduction -> {
-                    false
-                }
-                else -> {
-                    true
-                }
-            }
-//            return oldItem == newItem
-        }
-    }
+    private lateinit var mContext: Context
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaipeiTourListViewHolder {
@@ -100,7 +63,10 @@ class TaipeiTourListAdapter(
     }
 
     fun submitList(list: List<DataItem>) {
-        dataList.submitList(list)
+        Log.e("List", list.size.toString())
+        //https://juejin.cn/post/7054930375675478023
+        //toList()問題
+        dataList.submitList(list.toList())
     }
 
     inner class TaipeiTourListViewHolder(val binding: ListItemBinding) :

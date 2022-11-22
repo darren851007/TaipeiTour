@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ScrollView
 import android.widget.Toast
 import androidx.activity.OnBackPressedCallback
 import androidx.core.widget.NestedScrollView
@@ -26,6 +27,7 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
 
     private lateinit var binding: TaipeiTourListFragmentBinding
     private var page = 1
+    private var language = "zh-tw"
     private val taipeiTourAdapter by lazy {
         TaipeiTourListAdapter(this)
     }
@@ -88,42 +90,54 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
                     builder.setItems(
                         lang.toTypedArray(),
                         DialogInterface.OnClickListener { dialogInterface, position ->
+                            page = 1
+                            tempList.clear()
+                            binding.nestSV.fullScroll(ScrollView.FOCUS_UP)
                             when (position) {
                                 ZH_TW -> {
                                     Log.i("List", Config.LANGUAGE["ZH_TW"].toString())
                                     setRecyclerView("ZH_TW", 1)
+                                    language = Config.LANGUAGE["ZH_TW"].toString()
                                 }
                                 ZH_CN -> {
                                     Log.i("List", lang[1])
                                     setRecyclerView("ZH_CN", 1)
+                                    language = Config.LANGUAGE["ZH_CN"].toString()
                                 }
                                 EN -> {
                                     Log.i("List", lang[2])
                                     setRecyclerView("EN", 1)
+                                    language = Config.LANGUAGE["EN"].toString()
                                 }
                                 JA -> {
                                     Log.i("List", lang[3])
                                     setRecyclerView("JA", 1)
+                                    language = Config.LANGUAGE["JA"].toString()
                                 }
                                 KO -> {
                                     Log.i("List", lang[4])
                                     setRecyclerView("KO", 1)
+                                    language = Config.LANGUAGE["KO"].toString()
                                 }
                                 ES -> {
                                     Log.i("List", lang[5])
                                     setRecyclerView("ES", 1)
+                                    language = Config.LANGUAGE["ES"].toString()
                                 }
                                 ID -> {
                                     Log.i("List", lang[6])
                                     setRecyclerView("ID", 1)
+                                    language = Config.LANGUAGE["ID"].toString()
                                 }
                                 TH -> {
                                     Log.i("List", lang[7])
                                     setRecyclerView("TH", 1)
+                                    language = Config.LANGUAGE["TH"].toString()
                                 }
                                 VI -> {
                                     Log.i("List", lang[8])
                                     setRecyclerView("VI", 1)
+                                    language = Config.LANGUAGE["VI"].toString()
                                 }
                             }
 
@@ -143,9 +157,9 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
             ) {
                 if (scrollY == v.getChildAt(0).measuredHeight - v.measuredHeight) {
                     binding.loading.pbBar.visibility = View.VISIBLE
-                    Log.e("Lang", lang[0].toString())
+                    Log.e("Lang", language)
                     Log.e("Page", page.toString())
-                    presenter?.getData("zh-tw", page)
+                    presenter?.getData(language, page)
                 }
             }
 
@@ -164,13 +178,12 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
 
     }
 
-
-
-
+    val tempList = arrayListOf<DataItem>()
     override fun bindData(response: ArrayList<DataItem>) {
         page++
-        taipeiTourAdapter.submitList(response)
-
+        Log.e("RsData", response.toString())
+        tempList.addAll(response)
+        taipeiTourAdapter.submitList(tempList)
     }
 
 
