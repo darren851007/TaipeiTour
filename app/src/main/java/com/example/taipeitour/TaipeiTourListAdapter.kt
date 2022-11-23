@@ -39,7 +39,6 @@ class TaipeiTourListAdapter(
         }
     }
 
-    private lateinit var mContext: Context
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaipeiTourListViewHolder {
@@ -48,7 +47,6 @@ class TaipeiTourListAdapter(
             parent,
             false
         )
-        mContext = parent.context
         return TaipeiTourListViewHolder(binding)
 
     }
@@ -62,7 +60,7 @@ class TaipeiTourListAdapter(
         return dataList.currentList.size
     }
 
-    fun submitList(list: List<DataItem>) {
+    fun submitList(list: ArrayList<DataItem>) {
         Log.e("List", list.size.toString())
         //https://juejin.cn/post/7054930375675478023
         //toList()問題
@@ -84,17 +82,14 @@ class TaipeiTourListAdapter(
             binding.apply {
                 tvTitle.text = item.name
                 tvContent.text = item.introduction
-                if (!item.images.isNullOrEmpty()) {
-                    Glide.with(mContext)
-                        .load(item.images[0].src)
-                        .into(ivPicture)
+                val image = if (!item.images.isNullOrEmpty()) {
+                    item.images[0].src
                 } else {
-                    Glide.with(mContext)
-                        .load(R.mipmap.ic_no_image_icon_round)
-                        .into(ivPicture)
+                    R.mipmap.ic_no_image_icon_round
                 }
-
-
+                Glide.with(ivPicture.context)
+                    .load(image)
+                    .into(ivPicture)
                 Log.i("API", item.images.toString())
             }
         }

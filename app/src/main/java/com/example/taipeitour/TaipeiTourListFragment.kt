@@ -63,7 +63,7 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
 
         }
     }
-    
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -146,7 +146,7 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
             }
             false
         }
-        
+
         binding.nestSV.setOnScrollChangeListener(object : NestedScrollView.OnScrollChangeListener {
             override fun onScrollChange(
                 v: NestedScrollView,
@@ -165,10 +165,6 @@ class TaipeiTourListFragment : Fragment(), TaipeiTourListContract.View,
 
         })
 
-//        binding.button2.setOnClickListener {
-//            Log.e("Page", page.toString())
-//            setRecyclerView("ZH_TW", page)
-//        }
 
     }
 

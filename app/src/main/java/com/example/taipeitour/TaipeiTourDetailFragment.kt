@@ -22,16 +22,17 @@ import com.example.taipeitour.model.DataItem
 import com.example.taipeitour.utils.ActivityUtils
 import kotlinx.coroutines.NonDisposableHandle.parent
 
-class TaipeiTourDetailFragment: Fragment(), TaipeiTourDetailContract.View {
+class TaipeiTourDetailFragment : Fragment(), TaipeiTourDetailContract.View {
     private lateinit var binding: TaipeiTourListDetailFragmentBinding
     private val presenter: TaipeiTourDetailContract.Presenter by lazy {
         TaipeiTourDetailPresenter(this)
     }
+
     companion object {
         fun newInstance(item: DataItem): TaipeiTourDetailFragment {
             val fragmentDetailFragment = TaipeiTourDetailFragment()
             val bundle = Bundle()
-            bundle.putSerializable("data",item)
+            bundle.putSerializable("data", item)
             fragmentDetailFragment.arguments = bundle
             return fragmentDetailFragment
         }
@@ -51,32 +52,40 @@ class TaipeiTourDetailFragment: Fragment(), TaipeiTourDetailContract.View {
         initView()
         binding.apply {
             toolBar.toolBar.setNavigationOnClickListener {
-                (activity as MainActivity).onBackPressed()
+                (activity as? MainActivity)?.onBackPressed()
             }
         }
     }
 
     private fun initView() {
-        arguments?.getSerializable("data").let {
-            val data = it as DataItem
-            val url = data.url
+        val data = arguments?.getSerializable("data")
+        data?.let {
+            val data = it as? DataItem
+            val url = data?.url
             binding.apply {
-                toolBar.toolBar.title = data.name
-                if (!data.images.isNullOrEmpty()) {
-                    Glide.with(this@TaipeiTourDetailFragment)
-                        .load(data.images[0].src)
-                        .into(ivDeetail)
+                toolBar.toolBar.title = data?.name
+
+//                item?.images.takeIf { !it.isNullOrEmpty() }?.also { images ->
+////                    Glide.with(this@TaipeiTourDetailFragment)
+////                        .load(images[0].src)
+////                        .into(ivDeetail)
+////                }
+
+                if (!data?.images.isNullOrEmpty()) {
+                    if (data != null) {
+                        Glide.with(this@TaipeiTourDetailFragment)
+                            .load(data.images?.get(0)?.src)
+                            .into(ivDeetail)
+                    }
                 }
-                tvDetailTitle.text = data.name
-                tvDetailDesc.text = data.introduction.replace("&nbsp;", " ")
+                tvDetailTitle.text = data?.name
+                tvDetailDesc.text = data?.introduction?.replace("&nbsp;", " ")
                 tvUrl.text = url
                 tvUrl.setOnClickListener {
-                    startWebView(url)
+                    if (url != null) {
+                        startWebView(url)
+                    }
                 }
-
-
-
-
             }
         }
 
@@ -111,7 +120,6 @@ class TaipeiTourDetailFragment: Fragment(), TaipeiTourDetailContract.View {
                 }
             }
             webView.loadUrl(url)
-
 
 
         }
